@@ -34,6 +34,14 @@ TEST_CASE("Testa se X ganhou", "[velha]") {
 	};
 	REQUIRE( VerificaVelha(x_ganhou_linha) == 1);
 
+	// Tabuleiro onde X ganha pela segunda coluna
+	int x_ganhou_coluna[3][3] = {
+		{2, 1, 2},
+		{0, 1, 2},
+		{0, 1, 0}
+	};
+	REQUIRE( VerificaVelha(x_ganhou_coluna) == 1);
+
 	//outros testes aqui
 
 }

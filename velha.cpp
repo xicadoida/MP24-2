@@ -23,6 +23,8 @@ int VerificaVelha(int velha[3][3]) {
         if (velha[i][0] == 1 && velha[i][1] == 1 && velha[i][2] == 1) {
             return 1;  // X ganhou
         }
+		// Verifica as colunas
+
 
     }
 
