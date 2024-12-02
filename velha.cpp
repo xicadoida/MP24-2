@@ -18,10 +18,14 @@ int VerificaVelha(int velha[3][3]) {
     if (!VerificaNumeroXEO(velha)) {
         return -2;  // Jogo impossível
     }
+  	for (int i = 0; i < 3; i++) {
+    	// Verifica as linhas
+
+    }
 
     // Aqui você pode adicionar outras verificações mais tarde (como verificação de vencedor, indefinido, etc.)
     
-    return 1;  // Se for válido, retornamos 1 (pode-se prosseguir com o jogo)
+    return 0;  // Nenhum vencedor, impate ou indefinido
 }
 
 // Função auxiliar para verificar se o número de X e O é válido
