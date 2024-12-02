@@ -24,7 +24,9 @@ int VerificaVelha(int velha[3][3]) {
             return 1;  // X ganhou
         }
 		// Verifica as colunas
-
+        if (velha[0][i] == 1 && velha[1][i] == 1 && velha[2][i] == 1) {
+            return 1;  // X ganhou
+		}
 
     }
 
