@@ -28,6 +28,7 @@ int VerificaVelha(int velha[3][3]) {
             return 1;  // X ganhou
 		}
 
+				
     }
 
     // Aqui você pode adicionar outras verificações mais tarde (como verificação de vencedor, indefinido, etc.)
