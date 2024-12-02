@@ -27,7 +27,13 @@ int VerificaVelha(int velha[3][3]) {
         if (velha[0][i] == 1 && velha[1][i] == 1 && velha[2][i] == 1) {
             return 1;  // X ganhou
 		}
-
+		// Verifica as diagonais
+    	if (velha[0][0] == 1 && velha[1][1] == 1 && velha[2][2] == 1) {
+        	return 1;  // X ganhou
+    	}
+    	if (velha[0][2] == 1 && velha[1][1] == 1 && velha[2][0] == 1) {
+        	return 1;  // X ganhou
+		}
 				
     }
 
