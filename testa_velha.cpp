@@ -34,13 +34,6 @@ TEST_CASE("Testa se X ganhou", "[velha]") {
 	};
 	REQUIRE( VerificaVelha(x_ganhou_linha) == 1);
 
-	int o_ganhou_linha[3][3] = {
-		{2, 2, 2},
-		{1, 1, 0},
-		{1, 0, 0}
-	};
-	REQUIRE( VerificaVelha(o_ganhou_linha) == 2);
-
 	// Tabuleiro onde X ganha pela segunda coluna
 	int x_ganhou_coluna[3][3] = {
 		{2, 1, 2},
@@ -67,4 +60,14 @@ TEST_CASE("Testa se X ganhou", "[velha]") {
 
 	//outros testes aqui
 
+}
+
+TEST_CASE("testa se O ganhou", "[Velha]"){
+	//Tabuleiro onde O ganha pela primeira linha
+	int o_ganhou_linha[3][3] = {
+		{2, 2, 2},
+		{1, 1, 0},
+		{1, 0, 0}
+	};
+	REQUIRE( VerificaVelha(o_ganhou_linha) == 2);
 }
