@@ -74,5 +74,19 @@ bool VerificaNumeroXEO(int velha[3][3]) {
 
     // Se o número de X e O for válido (X não pode ser mais de 1 a mais que O, e O não pode ter mais peças que X)
     return (countX == countO || countX == countO + 1);
+	// Verificar se é empate (tabuleiro cheio e sem vencedor)
+    bool cheio = true;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (velha[i][j] == 0) {
+                cheio = false;
+                break;
+            }
+        }
+    }
+    if (cheio) return 0;  // Tabuleiro cheio sem vencedor é empate
+
+    // Caso contrário, ainda pode estar indefinido
+    return -1;
 }
 
