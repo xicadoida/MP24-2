@@ -95,3 +95,12 @@ TEST_CASE("testa se O ganhou", "[Velha]"){
 	};
 	REQUIRE( VerificaVelha(o_ganhou_diagonal_inversa) == 2);
 }
+TEST_CASE("Testa caso de empate", "[velha]") {
+    // Tabuleiro completamente preenchido sem vencedores
+    int tabuleiro_empate[3][3] = {
+        {1, 2, 1},
+        {2, 1, 2},
+        {2, 1, 2}
+    };
+    REQUIRE(VerificaVelha(tabuleiro_empate) == 0);  // Espera-se que o resultado seja empate
+}
