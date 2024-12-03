@@ -78,4 +78,20 @@ TEST_CASE("testa se O ganhou", "[Velha]"){
 		{0, 2, 0}
 	};
 	REQUIRE( VerificaVelha(o_ganhou_coluna) == 2);
+
+	//Tabuleiro onde O ganha por ambas as diagonais
+
+	int o_ganhou_diagonal[3][3] = {
+		{2, 1, 1},
+		{0, 2, 1},
+		{0, 0, 2}
+	};
+	REQUIRE( VerificaVelha(o_ganhou_diagonal) == 2);
+
+	int o_ganhou_diagonal_inversa[3][3] = {
+		{1, 1, 2},
+		{0, 2, 0},
+		{2, 0, 1}
+	};
+	REQUIRE( VerificaVelha(o_ganhou_diagonal_inversa) == 2);
 }
