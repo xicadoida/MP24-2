@@ -26,10 +26,18 @@ int VerificaVelha(int velha[3][3]) {
         if (velha[i][0] == 2 && velha[i][1] == 2 && velha[i][2] == 2) {
             return 2;  // O ganhou
         }
+
+		
 		// Verifica as colunas
         if (velha[0][i] == 1 && velha[1][i] == 1 && velha[2][i] == 1) {
             return 1;  // X ganhou
 		}
+		if (velha[0][i] == 2 && velha[1][i] == 2 && velha[2][i] == 2) {
+            return 2;  // O ganhou
+        }
+	}
+
+
 		// Verifica as diagonais
     	if (velha[0][0] == 1 && velha[1][1] == 1 && velha[2][2] == 1) {
         	return 1;  // X ganhou
@@ -38,7 +46,6 @@ int VerificaVelha(int velha[3][3]) {
         	return 1;  // X ganhou
 		}
 				
-    }
 
     // Aqui você pode adicionar outras verificações mais tarde (como verificação de vencedor, indefinido, etc.)
     
